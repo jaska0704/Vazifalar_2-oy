@@ -57,29 +57,29 @@
 // fruits.splice(fruits.length -1, 1);
 // console.log(fruits);
 
-// let ism = prompt("Ismingizni kiriting: ");
-// let yil = prompt("Tug'ilgan yilingizni kiriting: ");
-// let oy = prompt("Tug'ilgan oyingizni raqamlar ko'rinishida kiriting: ");
-// let kun = prompt("Tug'ilgan kuningizni kiriting: ");
-// let hozir = Date.now();
-// let sana = new Date(yil, (oy-1), kun).getTime();
+let ism = prompt("Ismingizni kiriting: ");
+let yil = prompt("Tug'ilgan yilingizni kiriting: ");
+let oy = prompt("Tug'ilgan oyingizni raqamlar ko'rinishida kiriting: ");
+let kun = prompt("Tug'ilgan kuningizni kiriting: ");
+let hozir = Date.now();
+let sana = new Date(yil, (oy-1), kun).getTime();
 
-// let yil1 = parseInt((hozir-sana)/1000/60/60/24/365.25);
-// let oy1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 / 31);
-// let kun1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 % 31);
+let yil1 = parseInt((hozir-sana)/1000/60/60/24/365.25);
+let oy1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 / 31);
+let kun1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 % 31);
 
-// console.log(
-//   "Hurmatli " +
-//     ism +
-//     ", siz " +
-//     yil1 +
-//     " yil, " + 
-//     oy1 +
-//     " oy, " + 
-//     kun1 +
-//     " kun" +
-//     " yashabsiz"
-// );
+console.log(
+  "Hurmatli " +
+    ism +
+    ", siz " +
+    yil1 +
+    " yil, " + 
+    oy1 +
+    " oy, " + 
+    kun1 +
+    " kun" +
+    " yashabsiz"
+);
 
 let mevalar = ["Olma", "Anor", "Limon", "Shaftoli", "Behi"];
 console.log(mevalar)
