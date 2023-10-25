@@ -66,7 +66,7 @@ let sana = new Date(yil, (oy-1), kun).getTime();
 
 let yil1 = parseInt((hozir-sana)/1000/60/60/24/365.25);
 let oy1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 / 31);
-let kun1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 % 31);
+let kun1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.18 % 31);
 
 console.log(
   "Hurmatli " +
