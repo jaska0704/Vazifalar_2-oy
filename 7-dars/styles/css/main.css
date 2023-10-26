@@ -1,9 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: blueviolet;
+}
+body div {
+  width: 100vw;
+  margin: 100px 550px;
+}
+
 a {
   text-decoration: none;
   font-size: 42px;
   color: rgb(140, 65, 11);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 a:hover {
+  color: white;
   text-shadow: 0 0 5px rgb(20, 171, 65);
-  box-shadow: 4px 4px 2px rgb(101, 100, 100);
+  box-shadow: 4px 4px 2px rgb(35, 34, 34);
 }/*# sourceMappingURL=main.css.map */
