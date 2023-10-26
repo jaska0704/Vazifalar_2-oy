@@ -66,8 +66,8 @@ let hozir = Date.now();
 let sana = new Date(yil, (oy-1), kun).getTime();
 
 let yil1 = parseInt((hozir-sana)/1000/60/60/24/365.25);
-let oy1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 / 31);
-let kun1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.18 % 31);
+let oy1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.2 / (365.25/12));
+let kun1 = parseInt((hozir-sana) / 1000 / 60 / 60 / 24 % 365.18 % (365.25/12));
 let soat1 = parseInt((hozir-sana) /1000 / 60 / 60 % 24);
 
 console.log(
