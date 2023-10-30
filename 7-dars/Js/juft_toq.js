@@ -1,8 +1,6 @@
-let son = +prompt("Istalgan sonni kiriting: ");
-if (son === 0) {
-    console.log("Siz juft ham, toq ham bo'lmagan son kiritdingiz!");
-} else if (son % 2 === 1) {
-    console.log("Siz toq son kiritdingiz!");
+let son = prompt("Istalgan sonni kiriting:");
+if (son % 2 === 0) {
+  alert(birorSon + " BU juft jon");
 } else {
-    console.log("Siz juft son kiritdingiz!");
+  alert(birorSon + " Bu toq son");
 }
