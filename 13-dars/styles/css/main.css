@@ -1,10 +1,14 @@
 body {
   font-family: "Roboto", sans-serif;
   min-height: 100%;
-  background-color: #eef1f6;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .continer {

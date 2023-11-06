@@ -1,0 +1,339 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 30px;
+  display: flex;
+}
+
+.half {
+  width: 50%;
+  padding: 1rem;
+}
+
+%layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1;
+  display: none;
+
+  &.show {
+    display: block;
+  }
+}
+
+.pizza {
+  position: relative;
+
+  .bread {
+    @extend %layer;
+    background: radial-gradient(#ecbe52, #cf9612);
+    border-radius: 50%;
+    border: 15px solid #bc4f00;
+    display: block;
+  }
+
+  .tomatoes {
+    @extend %layer;
+
+    .tomato {
+      width: 100px;
+      height: 100px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        width: 30%;
+        background: tomato;
+        border-radius: 100% 10px 10px 100% / 50% 10px 10px 50%;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        bottom: 10px;
+        width: 30%;
+        background: tomato;
+        border-radius: 10px 100% 100% 10px / 10px 50% 50% 10px;
+      }
+
+      &-1 {
+        top: 30%;
+        left: 30%;
+      }
+
+      &-2 {
+        top: 70%;
+        left: 30%;
+      }
+
+      &-3 {
+        top: 70%;
+        left: 70%;
+      }
+
+      &-4 {
+        top: 30%;
+        left: 70%;
+      }
+    }
+  }
+
+  .onions {
+    @extend %layer;
+
+    .onion {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border: 10px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px grey, 0 0 0 10px white, 0 0 0 11px grey,
+        0 0 0 20px white, 0 0 0 21px grey, 0 0 0 30px white;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      &-1 {
+        top: 15%;
+        left: 50%;
+      }
+
+      &-2 {
+        top: 85%;
+        left: 50%;
+      }
+
+      &-3 {
+        top: 50%;
+        left: 15%;
+      }
+
+      &-4 {
+        top: 50%;
+        left: 85%;
+      }
+    }
+  }
+
+  .pineapples {
+    @extend %layer;
+
+    .pineapple {
+      width: 100px;
+      height: 100px;
+      background: rgb(251, 255, 0);
+      border-top-right-radius: 80%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      &-1 {
+        top: 15%;
+        left: 70%;
+      }
+      &-2 {
+        top: 80%;
+        left: 28%;
+        transform: rotate(180deg);
+      }
+      &-3 {
+        top: 60%;
+        left: 80%;
+        transform: rotate(90deg);
+      }
+      &-4 {
+        top: 26%;
+        left: 8%;
+        transform: rotate(240deg);
+      }
+    }
+  }
+
+  .qazis {
+    @extend %layer;
+
+    .qazi {
+      width: 100px;
+      height: 100px;
+      background: rgba(86, 42, 6, 0.709);
+      border-radius: 50% 55% 60% 75%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        bottom: 10px;
+        width: 45%;
+        height: 40%;
+        background: rgba(112, 69, 4, 0.905);
+        border-radius: 100% 50px 50px 100%;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        bottom: 20px;
+        width: 50%;
+        height: 40%;
+        background: rgba(112, 69, 4, 0.905);
+        border-radius: 90% 50px 50px 100%;
+      }
+
+      &-1 {
+        top: 30%;
+        left: 50%;
+      }
+      &-2 {
+        top: 70%;
+        left: 50%;
+      }
+      &-3 {
+        top: 50%;
+        left: 70%;
+      }
+      &-4 {
+        top: 50%;
+        left: 30%;
+      }
+    }
+  }
+
+  .sausages {
+    @extend %layer;
+
+    .img1 {
+      width: 120px;
+      position: absolute;
+      top: 16%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+    }
+    .img2 {
+      width: 120px;
+      position: absolute;
+      top: 65%;
+      left: 14%;
+      transform: translate(-50%, -50%);
+    }
+    .img3 {
+      width: 120px;
+      position: absolute;
+      top: 38%;
+      left: 85%;
+     transform: translate(-50%, -50%);
+    }
+    .img4 {
+      width: 120px;
+      position: absolute;
+      top: 81%;
+      left: 71%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .cheeses {
+    @extend %layer;
+
+    .cheese-1 {
+      width: 60px;
+      position: absolute;
+      top: 10%;
+      left: 37%;
+      transform: translate(-50%, -50%);
+    }
+    .cheese-2 {
+      width: 60px;
+      position: absolute;
+      top: 30%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+    }
+    .cheese-3 {
+      width: 60px;
+      position: absolute;
+      top: 75%;
+      left: 17%;
+      transform: translate(-50%, -50%);
+    }
+    .cheese-4 {
+      width: 60px;
+      position: absolute;
+      top: 89%;
+      left: 62%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .olives {
+     @extend %layer;
+
+     .olive {
+      width: 20px;
+      height: 500px;
+      background: rgb(242, 218, 162);
+      border-radius: 30%;
+      box-shadow: 0 0 10px rgb(255, 166, 0);
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      &-1 {
+        top: 50%;
+        left: 73%;
+      }
+      &-2 {
+        top: 50%;
+        left: 50%;
+      }
+      &-3 {
+        top: 50%;
+        left: 25%;
+      }
+
+     }
+  }
+  .ketchups {
+     @extend %layer;
+
+     .ketchup {
+      width: 550px;
+      height: 15px;
+      background: rgb(245, 9, 9);
+      border-radius: 30%;
+      box-shadow: 0 0 10px rgb(255, 166, 0);
+      position: absolute;
+      transform: translate(-50%, -50%);
+
+      &-1 {
+        top: 25%;
+        left: 50%;
+      }
+      &-2 {
+        top: 50%;
+        left: 50%;
+      }
+      &-3 {
+        top: 75%;
+        left: 50%;
+      }
+
+     }
+  }
+}
